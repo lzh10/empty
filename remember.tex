@@ -1,0 +1,64 @@
+\documentclass{ltxdoc}
+\usepackage[UTF8,heading=true]{ctex}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=1.5cm]{geometry}
+
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{changepage}
+\usepackage{indentfirst}
+\setlength{\parindent}{0em}
+
+\ctexset{
+    part = {
+        name = {},
+        number = {},
+        format = \Huge,
+        format += \heiti,
+        format += \raggedright,
+    },
+    section = {
+        name = {},
+        number = {},
+        format = \Huge,
+        format += \lishu,
+        format += \raggedright,
+        indent = 2em,
+    }
+}
+
+% 设置页码位置
+\usepackage{fancyhdr}
+\fancyhf{}
+\lhead{\lishu\rightmark}
+\chead{}
+\rhead{\heiti\leftmark}
+\lfoot{}
+\cfoot{}
+\rfoot{\fangsong\thepage}
+\pagestyle{fancy}
+
+% 去除页眉横线
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+\begin{document} \Large
+\begin{titlepage}
+    \begin{center}
+        \vspace*{8cm}
+        \emph{\Huge\kaishu{写向未来的遗忘}}
+
+        \vspace*{8cm}
+        \LARGE\kaishu{李子恒}
+
+        \vspace*{0.5cm}
+        \fangsong\today
+    \end{center}
+\end{titlepage}
+
+\input{Introduction/00.tex}
+\input{chapter01/00.tex}
+\input{chapter02/00.tex}
+\input{chapter03/00.tex}
+
+\end{document}
